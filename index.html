@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Romántico</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .login-container h1 {
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .login-container input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ff6b6b;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .login-container button {
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-container button:hover {
+            background: #e55a5a;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff6b6b;
+            display: none;
+        }
+
+        .hearts {
+            color: #ff6b6b;
+            font-size: 30px;
+            margin-top: 10px;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>"Ingresa la contraseña princesita:"</h1>
+        <input type="password" id="password" placeholder="Ingresa tu contraseña">
+        <button onclick="validatePassword()">Ingresar</button>
+        <div class="message" id="message">
+            <p>Te amo ❤️💖💕</p>
+            <div class="hearts">❤️💓💞💗</div>
+        </div>
+    </div>
+
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const message = document.getElementById('message');
+
+            // Cambia "micontraseña" por la contraseña que prefieras
+            if (password === "amotusojitos") {
+                message.style.display = "block";
+            } else {
+                alert("Contraseña incorrecta. Intenta nuevamente.");
+            }
+        }
+    </script>
+</body>
+</html>
